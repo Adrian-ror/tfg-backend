@@ -17,11 +17,9 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import org.springframework.web.filter.CorsFilter;
 
-
 import java.util.Arrays;
 
 import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 
 /**
  * The Class SecurityConfig.
@@ -29,7 +27,7 @@ import static org.springframework.security.web.util.matcher.AntPathRequestMatche
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig  {
+public class SecurityConfig {
 
 	/**
 	 * The jwt filter.
@@ -142,8 +140,6 @@ public class SecurityConfig  {
 		return http.build();
 	}
 
-
-
 	/**
 	 * Authentication manager.
 	 *
@@ -157,19 +153,18 @@ public class SecurityConfig  {
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 
-
 	/**
 	 * Cors configuration source.
 	 *
 	 * @return the cors configuration source
 	 */
 
-
 	@Bean
 	public CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		config.addAllowedOrigin("http://localhost:5173");
+		config.addAllowedOrigin("https://tfg-frontend-alpha.vercel.app");
 		config.setAllowCredentials(true);
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("*");
@@ -184,6 +179,7 @@ public class SecurityConfig  {
 
 		// Permitir todas las solicitudes de origen desde http://localhost:3000
 		config.addAllowedOrigin("http://localhost:5173");
+		config.addAllowedOrigin("https://tfg-frontend-alpha.vercel.app");
 
 		// Permitir todas las cabeceras
 		config.addAllowedHeader("*");
@@ -200,7 +196,5 @@ public class SecurityConfig  {
 		// Retornar un filtro CORS
 		return new CorsFilter(source);
 	}
-
-
 
 }
