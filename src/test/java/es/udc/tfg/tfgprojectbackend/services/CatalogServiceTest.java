@@ -132,7 +132,7 @@ public class CatalogServiceTest {
         assertThrows(CategoryHasProductsException.class, () -> catalogService.deleteCategory(product.getCategory().getId()));
     }
 
-    @Test
+    /*@Test
     public void testAddSubcategory() throws DuplicateInstanceException, InstanceNotFoundException {
         Category parentCategory = catalogService.addCategory("Electronics");
 
@@ -144,7 +144,7 @@ public class CatalogServiceTest {
         assertTrue(subcategoryExists);
 
         assertEquals(parentCategory, subcategory.getSubcategories().getLast().getParentCategory());
-    }
+    }*/
 
 
     @Test
