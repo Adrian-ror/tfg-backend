@@ -1,0 +1,11 @@
+#Configure aspects related to Spring Framework and its modules.
+spring:
+    #Configure the datasource used by the application.
+    datasource:
+        url: @testDataSource.url@
+        username: @testDataSource.user@
+        password: @testDataSource.password@
+        #Configure the maximum number of active connections in the connection pool.
+        max-active: 1
+        #Configure the maximum number of idle(inactive) connections in the connection pool.
+        max-idle: 1
