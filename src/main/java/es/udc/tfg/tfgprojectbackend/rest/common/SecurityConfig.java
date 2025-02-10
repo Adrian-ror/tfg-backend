@@ -164,7 +164,7 @@ public class SecurityConfig {
 		CorsConfiguration config = new CorsConfiguration();
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		config.addAllowedOrigin("http://localhost:5173");
-		config.addAllowedOrigin("https://tfg-frontend-alpha.vercel.app");
+		config.addAllowedOrigin("https://commercehub-alpha.vercel.app");
 		config.setAllowCredentials(true);
 		config.addAllowedHeader("*");
 		config.addAllowedMethod("*");
@@ -179,7 +179,7 @@ public class SecurityConfig {
 
 		// Permitir todas las solicitudes de origen desde http://localhost:3000
 		config.addAllowedOrigin("http://localhost:5173");
-		config.addAllowedOrigin("https://tfg-frontend-alpha.vercel.app");
+		config.addAllowedOrigin("https://commercehub-alpha.vercel.app");
 
 		// Permitir todas las cabeceras
 		config.addAllowedHeader("*");
