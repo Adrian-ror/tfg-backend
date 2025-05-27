@@ -1,0 +1,25 @@
+# Ignorar archivos de compilación
+target/
+*.jar
+*.war
+
+# Ignorar archivos de configuración de entorno
+.env
+*.log
+logs/
+hs_err_pid*
+
+# Ignorar archivos de dependencias locales
+.mvn/
+.m2/
+node_modules/
+
+# Ignorar archivos de control de versiones
+.git/
+.gitignore
+.idea/
+.vscode/
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
